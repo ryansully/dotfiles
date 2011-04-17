@@ -1,0 +1,28 @@
+# ls
+alias ls='ls --color=auto'
+alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+
+# cd
+alias ..='cd ..'
+
+mkcd() {
+    if [ $# != 1 ]; then
+        echo "Usage: mkcd <dir>"
+    else
+        mkdir -p $1 && cd $1
+    fi
+}
+
+# grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# du
+alias diskhogs='du -S | sort -n -r | less'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
