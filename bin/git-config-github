@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+# $HOME/Dropbox/bash/git-config-github:
+#     GITHUB_USER=[github username]
+#     GITHUB_TOKEN=[github token]
+# (from http://help.github.com/git-email-settings/)
+. $HOME/Dropbox/bash/git-config-github
+
+if [[ `git remote -v | grep github.com` ]]; then
+    git config github.user $GITHUB_USER
+    git config github.token $GITHUB_TOKEN
+    echo 'GitHub username and token successfully set.'
+else
+    echo 'This directory is not associated with GitHub.'
+    exit 1
+fi

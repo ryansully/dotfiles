@@ -1,0 +1,23 @@
+[user]
+	name = Ryan Sullivan
+	email = ryan@ryansullivan.name
+[color]
+	ui = true
+[alias]
+	aa = add .
+	br = branch
+	ca = commit -a
+	co = checkout
+	config-github = !bash ~/.dotfiles/bin/git-config-github
+	config-remove-github = config --remove-section github
+	df = diff
+	pom = push origin master
+	pr = pull --rebase
+	st = status
+	unstage = reset HEAD
+[diff]
+	guitool = meld
+[instaweb]
+	httpd = apache2
+[core]
+	excludesfile = ~/.dotfiles/gitignore
