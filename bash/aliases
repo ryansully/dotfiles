@@ -6,6 +6,7 @@ alias la='ls -A'
 
 # cd
 alias ..='cd ..'
+alias gitroot='cd `git root`'
 
 mkcd() {
     if [ $# != 1 ]; then

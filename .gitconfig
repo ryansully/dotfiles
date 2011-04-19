@@ -10,9 +10,11 @@
 	co = checkout
 	config-github = !bash ~/.dotfiles/bin/git-config-github
 	config-remove-github = config --remove-section github
+	depth = rev-parse --show-cdup
 	df = diff
 	pom = push origin master
 	pr = pull --rebase
+	root = !pwd
 	st = status
 	unstage = reset HEAD
 [diff]
