@@ -12,6 +12,7 @@
 	config-remove-github = config --remove-section github
 	depth = rev-parse --show-cdup
 	df = diff
+	dfa = !`git config diff.guitool` .
 	pom = push origin master
 	pr = pull --rebase
 	root = !pwd
