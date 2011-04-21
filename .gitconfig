@@ -7,6 +7,7 @@
 	aa = add .
 	br = branch
 	ca = commit -a
+	ci = commit
 	co = checkout
 	config-github = !bash ~/.dotfiles/bin/git-config-github
 	config-remove-github = config --remove-section github
@@ -24,3 +25,7 @@
 	httpd = apache2
 [core]
 	excludesfile = ~/.dotfiles/gitignore
+[merge]
+	tool = meld
+[mergetool]
+	keepBackup = false
