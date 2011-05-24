@@ -1,6 +1,10 @@
 #!/bin/bash -e
+tstamp=`date +%Y%m%d%H%M%S`
+
 echo "Setting up .bashrc..."
-cp ~/.bashrc ~/.bashrc.backup
+# backup original file
+echo cp -v ~/.bashrc ~/.bashrc.backup.$tstamp
+# append source command
 cat >> ~/.bashrc << EOF
 
 . ~/.dotfiles/.bashrc
@@ -9,10 +13,10 @@ EOF
 # source startup script immediately
 . ~/.bashrc
 
-# backup/symlink
 echo "Setting up .gitconfig..."
-[ -L ~/.gitconfig ] && rm ~/.gitconfig
-[ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.backup
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+# rename symlink or original file
+[ -L ~/.gitconfig ] || [ -f ~/.gitconfig ] && echo mv -v ~/.gitconfig ~/.gitconfig.backup.$tstamp
+# make new symlink
+ln -sv ~/.dotfiles/.gitconfig ~/.gitconfig
 
 echo "Installation complete!"
