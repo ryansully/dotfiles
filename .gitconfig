@@ -1,8 +1,8 @@
 [user]
 	name = Ryan Sullivan
 	email = ryan@ryansullivan.name
-[color]
-	ui = true
+[core]
+	excludesfile = ~/.dotfiles/gitignore
 [alias]
 	aa = add .
 	br = branch
@@ -14,17 +14,19 @@
 	depth = rev-parse --show-cdup
 	df = diff
 	dfa = !`git config diff.guitool` . &
+	po = push origin
 	pom = push origin master
 	pr = pull --rebase
 	root = !pwd
+	scrap = !git reset --hard && git clean -df
 	st = status
 	unstage = reset HEAD
+[color]
+	ui = true
 [diff]
 	guitool = meld
 [instaweb]
 	httpd = apache2
-[core]
-	excludesfile = ~/.dotfiles/gitignore
 [merge]
 	tool = meld
 [mergetool]
