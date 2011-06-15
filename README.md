@@ -1,7 +1,7 @@
 Ryan's dotfiles
 ===============
 
-Supports Ubuntu 10.10 (Maverick Meerkat).
+Supports Ubuntu 11.04 (Natty Narwhal).
 
 Installation
 ------------
