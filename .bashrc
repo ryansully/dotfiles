@@ -8,4 +8,10 @@ here=`dirname $BASH_SOURCE`
 unset me
 unset here
 [ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
+
+# ignoredups:  causes lines matching the previous history entry to not be saved
+# ignorespace: lines which begin with a space character are not saved in the
+#              history list
+HISTCONTROL=ignoredups:ignorespace
+
 fortune # :)
