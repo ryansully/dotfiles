@@ -7,6 +7,7 @@ here=`dirname $BASH_SOURCE`
 [ -f $here/bash/prompts ] && . $here/bash/prompts
 unset me
 unset here
+[ -f $HOME/.ec2/.bashrc ] && . $HOME/.ec2/.bashrc
 [ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
 
 # ignoredups:  causes lines matching the previous history entry to not be saved
