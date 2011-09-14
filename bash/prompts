@@ -51,10 +51,28 @@ prompt_original_git() {
 # If you would like to see if there're untracked files, then you can
 # set GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value. If there're
 # untracked files, then a '%' will be shown next to the branch name.
+#
+# If you would like to see the difference between HEAD and its
+# upstream, set GIT_PS1_SHOWUPSTREAM="auto".  A "<" indicates
+# you are behind, ">" indicates you are ahead, and "<>"
+# indicates you have diverged.  You can further control
+# behaviour by setting GIT_PS1_SHOWUPSTREAM to a space-separated
+# list of values:
+#     verbose       show number of commits ahead/behind (+/-) upstream
+#     legacy        don't use the '--count' option available in recent
+#                   versions of git-rev-list
+#     git           always compare HEAD to @{upstream}
+#     svn           always compare HEAD to your SVN upstream
+# By default, __git_ps1 will compare HEAD to your SVN upstream
+# if it can find one, or @{upstream} otherwise.  Once you have
+# set GIT_PS1_SHOWUPSTREAM, you can override it on a
+# per-repository basis by setting the bash.showUpstream config
+# variable.
 _ps1_git_vars() {
     GIT_PS1_SHOWDIRTYSTATE=true
     GIT_PS1_SHOWSTASHSTATE=true
     GIT_PS1_SHOWUNTRACKEDFILES=true
+    GIT_PS1_SHOWUPSTREAM="verbose"
 
     # colors
     PS1_GIT_COLOR_DIRTY="\[$Red\]"
@@ -138,7 +156,7 @@ _ps1_virtualenv() {
 #    bottom takes color precedence, e.g. untracked overrides dirty
 #
 prompt_me() {
-    PROMPT_COMMAND='RET=$?;PS1="`_ps1_title``_ps1_virtualenv``_ps1_exit_status $RET`\[$BBlue\]$(_ps1_pwd 20)\[$Color_Off\]$(_ps1_git_color)$(__git_ps1 " (%s)")\[$Color_Off\]\$ "'
+    PROMPT_COMMAND='RET=$?;PS1="`_ps1_title``_ps1_virtualenv``_ps1_exit_status $RET`\[$BBlue\]$(_ps1_pwd 20)\[$Color_Off\]$(__git_ps1 " (`_ps1_git_color`%s\[$Color_Off\])")\$ "'
     _ps1_git_vars
 }
 
