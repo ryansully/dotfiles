@@ -114,15 +114,22 @@ _ps1_exit_status() {
     fi
 }
 
+_ps1_virtualenv() {
+    if [ "$VIRTUAL_ENV" ]; then
+        echo -e "(\[$Yellow\]`basename "\$VIRTUAL_ENV"`\[$Color_Off\]) "
+    fi
+}
+
 #
 # My super prompt :)
 #
 # 1. set the terminal title to user@host:dir
-# 2. green user@host
-# 3. red exit status if above zero (don't display if zero)
-# 4. blue dir, uses basename if path exceeds 20 characters, because 2+ line
+# 2. virtualenv
+# 3. green user@host
+# 4. red exit status if above zero (don't display if zero)
+# 5. blue dir, uses basename if path exceeds 20 characters, because 2+ line
 #    prompts suck
-# 5. colored git prompt: displays current branch when inside a git repo
+# 6. colored git prompt: displays current branch when inside a git repo
 #    clean:     (default color)
 #    dirty:     red *
 #    staged:    green +
@@ -132,7 +139,7 @@ _ps1_exit_status() {
 #    bottom takes color precedence, e.g. untracked overrides dirty
 #
 prompt_me() {
-    PROMPT_COMMAND='RET=$?;PS1="`_ps1_title`\[$BGreen\]\u@\h\[$Color_Off\]:`_ps1_exit_status $RET`\[$BBlue\]$(_ps1_pwd 20)\[$Color_Off\]$(_ps1_git_color)$(__git_ps1 " (%s)")\[$Color_Off\]\$ "'
+    PROMPT_COMMAND='RET=$?;PS1="`_ps1_title``_ps1_virtualenv`\[$BGreen\]\u@\h\[$Color_Off\]:`_ps1_exit_status $RET`\[$BBlue\]$(_ps1_pwd 20)\[$Color_Off\]$(_ps1_git_color)$(__git_ps1 " (%s)")\[$Color_Off\]\$ "'
     _ps1_git_vars
 }
 
