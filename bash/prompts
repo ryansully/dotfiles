@@ -57,20 +57,20 @@ _ps1_git_vars() {
     GIT_PS1_SHOWUNTRACKEDFILES=true
 
     # colors
-    PS1_GIT_COLOR_DIRTY="\[\e[0;31m\]"     # red
-    PS1_GIT_COLOR_STAGED="\[\e[0;32m\]"    # green
-    PS1_GIT_COLOR_STASHED="\[\e[0;33m\]"   # yellow
-    PS1_GIT_COLOR_UNTRACKED="\[\e[0;34m\]" # blue
-    PS1_GIT_COLOR_GITDIR="\[\e[1;31m\]"    # light red
+    PS1_GIT_COLOR_DIRTY="\[$Red\]"
+    PS1_GIT_COLOR_STAGED="\[$Green\]"
+    PS1_GIT_COLOR_STASHED="\[$Yellow\]"
+    PS1_GIT_COLOR_UNTRACKED="\[$Blue\]"
+    PS1_GIT_COLOR_GITDIR="\[$BRed\]"
 }
 
 _ps1_git_color() {
 	local g="$(__gitdir)"
 	if [ -n "$g" ]; then
-		local w
-		local i
-		local s
-		local u
+		local w # dirty
+		local i # indexed
+		local s # stashed
+		local u # untracked
 
 		if [ "true" = "$(git rev-parse --is-inside-git-dir 2>/dev/null)" ]; then
 			i=$PS1_GIT_COLOR_GITDIR
@@ -102,7 +102,7 @@ _ps1_git_color() {
 
 _ps1_pwd() {
     if [[ `pwd|sed "s#$HOME#~#"|wc -c|tr -d " "` > $1 ]]; then
-        echo $(basename `pwd`)
+        echo $(basename "`pwd`")
     else
         echo $(pwd | sed "s#$HOME#~#")
     fi
@@ -110,7 +110,7 @@ _ps1_pwd() {
 
 _ps1_exit_status() {
     if [ $1 != 0 ]; then
-        echo -e "\e[0;31m$1\e[0m:"
+        echo -e "\[$Red\]$1\[$Color_Off\]:"
     fi
 }
 
@@ -132,7 +132,7 @@ _ps1_exit_status() {
 #    bottom takes color precedence, e.g. untracked overrides dirty
 #
 prompt_me() {
-    PROMPT_COMMAND='PS1="`_ps1_title`\[\e[1;32m\]\u@\h\[\e[0m\]:\`_ps1_exit_status \$?\`\[\e[1;34m\]$(_ps1_pwd 20)\[\e[0m\]$(_ps1_git_color)$(__git_ps1 " (%s)")\[\e[0m\]\$ "'
+    PROMPT_COMMAND='RET=$?;PS1="`_ps1_title`\[$BGreen\]\u@\h\[$Color_Off\]:`_ps1_exit_status $RET`\[$BBlue\]$(_ps1_pwd 20)\[$Color_Off\]$(_ps1_git_color)$(__git_ps1 " (%s)")\[$Color_Off\]\$ "'
     _ps1_git_vars
 }
 
