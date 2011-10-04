@@ -23,6 +23,7 @@ setup_symlink() {
     ln -sv "$HOME/.dotfiles/$1" "$2"
 }
 setup_symlink ".gitconfig" "$HOME"
+setup_symlink ".vim" "$HOME"
 setup_symlink ".vimrc" "$HOME"
 setup_symlink "sublime-text-2/User" "$HOME/.config/sublime-text-2/Packages"
 
