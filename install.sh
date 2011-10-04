@@ -24,5 +24,6 @@ setup_symlink() {
 }
 setup_symlink ".gitconfig" "$HOME"
 setup_symlink ".vimrc" "$HOME"
+setup_symlink "sublime-text-2/User" "$HOME/.config/sublime-text-2/Packages"
 
 echo "Installation complete!"
