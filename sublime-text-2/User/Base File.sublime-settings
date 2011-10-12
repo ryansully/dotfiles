@@ -9,10 +9,6 @@
     // white space within the selection, and "all" to draw all white space
     "draw_white_space": "all",
 
-    // Set to true to ensure the last line of the file ends in a newline
-    // character when saving
-    "ensure_newline_at_eof_on_save": true,
-
     "font_face": "Ubuntu Mono",
     "font_size": 12,
 
