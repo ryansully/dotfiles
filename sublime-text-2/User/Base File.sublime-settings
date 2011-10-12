@@ -2,6 +2,9 @@
 // are overridden in turn by file type specific settings. Place your settings
 // here, to ensure they're preserved when upgrading.
 {
+    // Valid values are "smooth", "phase", "blink", "wide" and "solid".
+    "caret_style": "phase",
+
     // Sets the colors used within the text area
     "color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 
