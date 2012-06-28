@@ -1,0 +1,9 @@
+# home bin
+[ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
+
+# NPM path
+[ -d $HOME/node_modules/.bin ] && PATH="$HOME/node_modules/.bin:$PATH"
+
+# Android SDK
+[ -d $HOME/android-sdk-linux ] && export PATH=${PATH}:$HOME/android-sdk-linux/tools:$HOME/android-sdk-linux/platform-tools
+
