@@ -17,7 +17,7 @@
 	po = push origin
 	pom = push origin master
 	pr = pull --rebase
-	prs = !git pull --rebase && git submodule update
+	prs = !git pull --rebase && git submodule update --rebase
 	root = !pwd
 	scrap = !git reset --hard && git clean -df
 	st = status
