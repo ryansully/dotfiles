@@ -1,16 +1,43 @@
 {
+    /*
+        Maps syntax names to linters. This allows variations on a syntax
+        (for example "Python (Django)") to be linted. The key is
+        the name of the syntax **as it appears in the syntax list
+        at the bottom right of the window**, and the value
+        is the linter name **as listed in the README** (all lowercase)
+        that the syntax maps to.
+    */
+    "sublimelinter_syntax_map":
+    {
+        "Python Django": "python",
+        "Ruby on Rails": "ruby"/*,
+        "SCSS": "css"*/
+    },
+
     // If true, lines with errors or warnings will have a gutter mark.
     "sublimelinter_gutter_marks": true,
 
     // jshint: options for linting JavaScript. See http://jshint.com/options/ for more info.
     "jshint_options":
     {
-        "evil": false,
-        "regexdash": false,
         "browser": false,
-        "wsh": false,
+        "curly": true,
+        "eqnull": true,
+        "evil": false,
+        "expr": false,
+        "indent": 4,
+        "latedef": true,
+        "laxbreak": true,
+        "laxcomma": true,
+        "newcap": true,
+        "noempty": true,
+        "regexdash": false,
+        "shadow": true,
+        "strict": true,
+        "sub": true,
         "trailing": true,
-        "sub": true
+        "unused": true,
+        "wsh": false
     },
 
     // CSSLint options:
