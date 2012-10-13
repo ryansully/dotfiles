@@ -9,15 +9,21 @@
 	ca = commit -a
 	ci = commit
 	co = checkout
+	cob = checkout -b
 	config-github = !bash ~/.dotfiles/bin/git-config-github
 	config-remove-github = config --remove-section github
+	cp = cherry-pick
 	depth = rev-parse --show-cdup
 	df = diff
 	dfa = !`git config diff.guitool` . &
+	lg = log --pretty=badass --graph
 	po = push origin
 	pom = push origin master
 	pr = pull --rebase
 	prs = !git pull --rebase && git submodule update --rebase
+	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream"
+	pur = !"git fetch origin -v; git fetch upstream -v; git rebase upstream"
+	purs = !"git fetch origin -v; git fetch upstream -v; git rebase upstream; git submodule update --rebase"
 	root = !pwd
 	scrap = !git reset --hard && git clean -df
 	st = status
@@ -33,3 +39,5 @@
 	tool = meld
 [mergetool]
 	keepBackup = false
+[pretty]
+	badass = %C(yellow)%h%Creset%x09%Cgreen%d%Creset %s %C(bold blue)<%an>%Creset
