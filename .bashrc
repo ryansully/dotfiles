@@ -24,4 +24,4 @@ HISTCONTROL=ignoredups:ignorespace
 # 256 colors in terminal
 export TERM='xterm-256color'
 
-fortune # :)
+/usr/games/fortune # :)
