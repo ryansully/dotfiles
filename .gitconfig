@@ -41,3 +41,5 @@
 	keepBackup = false
 [pretty]
 	badass = %C(yellow)%h%Creset%x09%Cgreen%d%Creset %s %C(bold blue)<%an>%Creset
+[push]
+	default = current
