@@ -10,7 +10,8 @@
     "sublimelinter_syntax_map":
     {
         "Python Django": "python",
-        "Ruby on Rails": "ruby"/*,
+        "Ruby on Rails": "ruby",
+        "C++": "c"/*,
         "SCSS": "css"*/
     },
 
@@ -25,6 +26,7 @@
         "eqnull": true,
         "evil": false,
         "expr": false,
+        "forin": true,
         "indent": 4,
         "latedef": true,
         "laxbreak": true,

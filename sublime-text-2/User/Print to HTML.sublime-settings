@@ -1,0 +1,7 @@
+{
+    // If true, open browser's Print dialog when using Print as HTML via Browser
+    "auto_print_in_browser" : false,
+
+    // If true, output numbered HTML <A name=...> anchors at the start of each line
+    "line_anchors": true
+}
