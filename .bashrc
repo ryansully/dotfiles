@@ -1,3 +1,6 @@
+# Ubuntu: find and uncomment the following line in ~/.bashrc:
+#force_color_prompt=yes
+
 bashrc() {
     . $BASH_SOURCE
 }
@@ -19,7 +22,8 @@ unset here
 # ignoredups:  causes lines matching the previous history entry to not be saved
 # ignorespace: lines which begin with a space character are not saved in the
 #              history list
-HISTCONTROL=ignoredups:ignorespace
+# ignoreboth
+HISTCONTROL=ignoreboth
 
 # 256 colors in terminal
 export TERM='xterm-256color'
