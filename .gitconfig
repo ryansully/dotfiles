@@ -1,8 +1,6 @@
 [user]
 	name = Ryan Sullivan
 	email = ryan@ryansully.com
-[core]
-	excludesfile = ~/.dotfiles/gitignore
 [alias]
 	aa = add .
 	br = branch
@@ -31,10 +29,13 @@
 	unstage = reset HEAD
 [color]
 	ui = true
+[core]
+	editor = vim
+	excludesfile = ~/.dotfiles/gitignore
 [diff]
 	guitool = meld
 [instaweb]
-	httpd = apache2
+	httpd = lighttpd
 [merge]
 	tool = meld
 [mergetool]
