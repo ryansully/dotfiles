@@ -14,6 +14,12 @@ EOF
 # source startup script immediately
 . ~/.bashrc
 
+# append source command
+cat >> ~/.bash_profile << EOF
+
+[ -f ~/.dotfiles/bash/paths ] && . ~/.dotfiles/bash/paths
+EOF
+
 # npm
 npm adduser
 
