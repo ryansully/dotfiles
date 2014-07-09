@@ -1,3 +1,14 @@
+# https://raw.github.com/github/gitignore/master/Global/Linux.gitignore
 *~
-*.pyc
+
+# https://raw.github.com/github/gitignore/master/Python.gitignore
+*.py[cod]
 *.orig
+
+# https://raw.github.com/github/gitignore/master/Global/SublimeText.gitignore
+# SublimeText project files
+*.sublime-workspace
+
+# https://raw.github.com/github/gitignore/master/Global/SVN.gitignore
+.svn/
+
