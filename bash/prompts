@@ -83,39 +83,36 @@ _ps1_git_vars() {
 }
 
 _ps1_git_color() {
-	local g="$(__gitdir)"
-	if [ -n "$g" ]; then
-		local w # dirty
-		local i # indexed
-		local s # stashed
-		local u # untracked
+	local w # dirty
+	local i # indexed
+	local s # stashed
+	local u # untracked
 
-		if [ "true" = "$(git rev-parse --is-inside-git-dir 2>/dev/null)" ]; then
-			i=$PS1_GIT_COLOR_GITDIR
-		elif [ "true" = "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
-			if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
-				if [ "$(git config --bool bash.showDirtyState)" != "false" ]; then
-					git diff --no-ext-diff --quiet --exit-code || w=$PS1_GIT_COLOR_DIRTY
-					if git rev-parse --quiet --verify HEAD >/dev/null; then
-						git diff-index --cached --quiet HEAD -- || i=$PS1_GIT_COLOR_STAGED
-					else
-						i=$PS1_GIT_COLOR_DIRTY
-					fi
+	if [ "true" = "$(git rev-parse --is-inside-git-dir 2>/dev/null)" ]; then
+		i=$PS1_GIT_COLOR_GITDIR
+	elif [ "true" = "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
+		if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
+			if [ "$(git config --bool bash.showDirtyState)" != "false" ]; then
+				git diff --no-ext-diff --quiet --exit-code || w=$PS1_GIT_COLOR_DIRTY
+				if git rev-parse --quiet --verify HEAD >/dev/null; then
+					git diff-index --cached --quiet HEAD -- || i=$PS1_GIT_COLOR_STAGED
+				else
+					i=$PS1_GIT_COLOR_DIRTY
 				fi
 			fi
-			if [ -n "${GIT_PS1_SHOWSTASHSTATE-}" ]; then
-			        git rev-parse --verify refs/stash >/dev/null 2>&1 && s=$PS1_GIT_COLOR_STASHED
-			fi
-
-			if [ -n "${GIT_PS1_SHOWUNTRACKEDFILES-}" ]; then
-			   if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-			      u=$PS1_GIT_COLOR_UNTRACKED
-			   fi
-			fi
+		fi
+		if [ -n "${GIT_PS1_SHOWSTASHSTATE-}" ]; then
+		        git rev-parse --verify refs/stash >/dev/null 2>&1 && s=$PS1_GIT_COLOR_STASHED
 		fi
 
-		echo "$w$i$s$u"
+		if [ -n "${GIT_PS1_SHOWUNTRACKEDFILES-}" ]; then
+		   if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+		      u=$PS1_GIT_COLOR_UNTRACKED
+		   fi
+		fi
 	fi
+
+	echo "$w$i$s$u"
 }
 
 _ps1_pwd() {
