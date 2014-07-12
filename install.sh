@@ -37,5 +37,6 @@ setup_symlink ".npmrc" "$HOME"
 setup_symlink ".vim" "$HOME"
 setup_symlink ".vimrc" "$HOME"
 setup_symlink "sublime-text-2/User" "$HOME/.config/sublime-text-2/Packages"
+setup_symlink "sublime-text-3/User" "$HOME/.config/sublime-text-3/Packages"
 
 echo "Installation complete!"
