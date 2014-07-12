@@ -1,2 +1,8 @@
-Package Control.sublime-settings
-sublime-text-2/User/SublimeMRU.sublime-settings
+Package Control.*
+!Package Control.sublime-settings
+SublimeMRU.sublime-settings
+*.cache
+*.tmTheme
+Color Highlighter
+.SublimeREPLHistory
+
