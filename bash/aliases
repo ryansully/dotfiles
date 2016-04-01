@@ -36,4 +36,5 @@ kill-evolution() {
 }
 
 alias nextwall='/opt/extras.ubuntu.com/variety/bin/variety --next'
+alias ytmp3='youtube-dl -x --audio-format mp3'
 
