@@ -12,9 +12,9 @@ if has("gui_running")
     colorscheme twilight
 endif
 
-set background=dark              " "dark" or "light", used for highlight colors
-set cursorline                   " highlight the screen line of the cursor
-set guifont=UbuntuBeta\ Mono\ 12 " Name(s) of font(s) to be used
+set background=dark          " "dark" or "light", used for highlight colors
+set cursorline               " highlight the screen line of the cursor
+set guifont=Ubuntu\ Mono\ 12 " Name(s) of font(s) to be used
 
 "set list                     " show <Tab> and <EOL>
 "set listchars=tab:>-,trail:- " characters for displaying in list mode
