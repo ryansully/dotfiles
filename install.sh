@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/usr/bin/env bash -e
+
 tstamp=`date +%Y%m%d%H%M%S`
 
 echo "Setting up .bashrc..."

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # home and local bin
 [ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
 [ -d $HOME/.local/bin ] && PATH="$HOME/.local/bin:$PATH"

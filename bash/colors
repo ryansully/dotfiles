@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Reset
 Color_Off='\e[0m'       # Text Reset
 

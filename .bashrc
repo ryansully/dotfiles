@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Ubuntu: find and uncomment the following line in ~/.bashrc:
 #force_color_prompt=yes
 
