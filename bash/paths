@@ -1,5 +1,6 @@
-# home bin
+# home and local bin
 [ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
+[ -d $HOME/.local/bin ] && PATH="$HOME/.local/bin:$PATH"
 
 # NPM path
 [ -d $HOME/.npm-packages/bin ] && PATH="$HOME/.npm-packages/bin:$PATH"
