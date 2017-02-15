@@ -1,7 +1,7 @@
 Ryan's dotfiles
 ===============
 
-Supports Ubuntu 11.04 (Natty Narwhal).
+Supports Ubuntu.
 
 Installation
 ------------
