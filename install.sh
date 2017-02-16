@@ -2,6 +2,8 @@
 
 tstamp=`date +%Y%m%d%H%M%S`
 
+[ `which pip3` ] && pip3 install --user -r pip/requirements.txt
+
 echo "Setting up .bashrc..."
 # backup original file
 cp -v ~/.bashrc ~/.bashrc.backup.$tstamp
