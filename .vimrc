@@ -49,9 +49,9 @@ set foldmethod=indent " folding type
 " Indentation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set expandtab    " use spaces when <Tab> is inserted
-set shiftwidth=4 " number of spaces to use for (auto)indent step
+set shiftwidth=2 " number of spaces to use for (auto)indent step
 set smarttab     " use 'shiftwidth' when inserting <Tab>
-set tabstop=4    " number of spaces that <Tab> in file uses
+set tabstop=2    " number of spaces that <Tab> in file uses
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
