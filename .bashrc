@@ -24,6 +24,10 @@ unset here
 # ignoreboth
 HISTCONTROL=ignoreboth
 
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+shopt -s globstar
+
 # 256 colors in terminal
 export TERM='xterm-256color'
 
