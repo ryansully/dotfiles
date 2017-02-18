@@ -18,9 +18,6 @@ here=`dirname $BASH_SOURCE`
 unset me
 unset here
 
-# EC2 settings
-[ -f $HOME/.ec2/.bashrc ] && . $HOME/.ec2/.bashrc
-
 # ignoredups:  causes lines matching the previous history entry to not be saved
 # ignorespace: lines which begin with a space character are not saved in the
 #              history list
