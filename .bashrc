@@ -31,4 +31,10 @@ shopt -s globstar
 # 256 colors in terminal
 export TERM='xterm-256color'
 
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/Projects
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 /usr/games/fortune # :)

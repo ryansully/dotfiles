@@ -1,0 +1,2 @@
+virtualenv ; python_version < '3'
+virtualenvwrapper ; python_version < '3'
