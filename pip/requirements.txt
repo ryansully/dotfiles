@@ -1,4 +1,0 @@
-ipython
-ipdb
-PyZen
-FirePython

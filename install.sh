@@ -2,9 +2,10 @@
 
 tstamp=`date +%Y%m%d%H%M%S`
 
-sudo apt-get install git python3-pip
+sudo apt-get install git python-pip python3-pip
 
-[ `which pip3` ] && pip3 install --user -r pip/requirements.txt
+[ `which pip3` ] && sudo pip3 install -r pip/requirements.txt
+[ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
 
 # install Source Code Pro font
 if [ `which git` ]; then
