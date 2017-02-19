@@ -6,6 +6,14 @@ sudo apt-get install git python3-pip
 
 [ `which pip3` ] && pip3 install --user -r pip/requirements.txt
 
+# install Source Code Pro font
+if [ `which git` ]; then
+    FONT_HOME=~/.local/share/fonts
+    mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
+    git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git "$FONT_HOME/adobe-fonts/source-code-pro"
+    fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro"
+fi
+
 echo "Setting up .bashrc..."
 # backup original file
 cp -v ~/.bashrc ~/.bashrc.backup.$tstamp
