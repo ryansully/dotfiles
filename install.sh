@@ -2,6 +2,8 @@
 
 tstamp=`date +%Y%m%d%H%M%S`
 
+sudo apt-get install git python3-pip
+
 [ `which pip3` ] && pip3 install --user -r pip/requirements.txt
 
 echo "Setting up .bashrc..."
