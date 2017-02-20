@@ -1,2 +1,4 @@
 ipdb
 ipython
+powerline-gitstatus
+powerline-status
