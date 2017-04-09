@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 
 tstamp=`date +%Y%m%d%H%M%S`
 
