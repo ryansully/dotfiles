@@ -25,6 +25,7 @@
 	root = !pwd
 	scrap = !git reset --hard && git clean -df
 	st = status
+	sync = !"git fetch upstream; git checkout master; git merge upstream/master"
 	undo = reset --soft HEAD^
 	unstage = reset HEAD
 [color]
