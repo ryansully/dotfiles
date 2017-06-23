@@ -6,6 +6,8 @@ case `uname` in
     "Linux")
         sudo apt-get update && sudo apt-get upgrade
         sudo apt-get install git python-pip python3-pip
+
+        sudo apt-get install fortune-mod fortunes-off
         ;;
     "Darwin")
         # install Homebrew
@@ -18,11 +20,14 @@ case `uname` in
 
         # Homebrew will also install Setuptools, pip, pip3
         brew install git python python3
+
+        brew install fortune
         ;;
 esac
 
 [ `which pip3` ] && sudo pip3 install -r pip/requirements.txt
 [ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
+[ `which gem` ] && sudo gem install lolcat
 
 # install Vim with Python 3 support
 if [ `uname` = "Darwin" ] && [ `which brew` ]; then

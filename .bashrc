@@ -31,4 +31,4 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-/usr/games/fortune # :)
+[ `which fortune` ] && [ `which lolcat` ] && fortune | lolcat # :)
