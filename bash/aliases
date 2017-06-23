@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 # ls
-alias ls='ls --color=auto'
+case `uname` in
+    "Linux")
+        alias ls='ls --color=auto'
+        ;;
+    "Darwin")
+        alias ls='ls -GF'
+        ;;
+esac
 alias l='ls -CF'
 alias ll='ls -alF'
 alias la='ls -A'
