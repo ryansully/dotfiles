@@ -3,17 +3,11 @@
 # Ubuntu: find and uncomment the following line in ~/.bashrc:
 #force_color_prompt=yes
 
-bashrc() {
-    . $BASH_SOURCE
-}
-me=`readlink -f $0`
-here=`dirname $BASH_SOURCE`
-
 # Bash settings
-[ -f $here/bash/aliases ] && . $here/bash/aliases
-[ -f $here/bash/colors ] && . $here/bash/colors
-[ -f $here/bash/paths ] && . $here/bash/paths
-[ -f $here/bash/prompts ] && . $here/bash/prompts
+[ -f ~/.dotfiles/bash/aliases ] && . ~/.dotfiles/bash/aliases
+[ -f ~/.dotfiles/bash/colors ] && . ~/.dotfiles/bash/colors
+[ -f ~/.dotfiles/bash/paths ] && . ~/.dotfiles/bash/paths
+[ -f ~/.dotfiles/bash/prompts ] && . ~/.dotfiles/bash/prompts
 
 unset me
 unset here
