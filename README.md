@@ -1,7 +1,7 @@
 Ryan's dotfiles
 ===============
 
-Supports Ubuntu and Bash on Windows.
+Supports Ubuntu, Bash on Windows, Mac OS X.
 
 Installation
 ------------

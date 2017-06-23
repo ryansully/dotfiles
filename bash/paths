@@ -11,3 +11,7 @@ export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
 # Android SDK
 [ -d $HOME/Development/adt-bundle-linux-x86_64/sdk ] && export PATH="${PATH}:$HOME/Development/adt-bundle-linux-x86_64/sdk/tools:$HOME/Development/adt-bundle-linux-x86_64/sdk/platform-tools"
 
+if [ `uname` = "Darwin" ]; then
+    [ -d "$HOME/Library/Python/2.7/bin" ] && PATH="$HOME/Library/Python/2.7/bin:$PATH"
+    [ -d "$HOME/Library/Python/3.6/bin" ] && PATH="$HOME/Library/Python/3.6/bin:$PATH"
+fi
