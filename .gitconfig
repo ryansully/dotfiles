@@ -3,6 +3,7 @@
 	email = ryan@ryansully.com
 [alias]
 	aa = add .
+	aliases = config --get-regexp alias
 	br = branch
 	ca = commit -a
 	ci = commit
