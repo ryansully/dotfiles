@@ -9,9 +9,6 @@
 [ -f ~/.dotfiles/bash/paths ] && . ~/.dotfiles/bash/paths
 [ -f ~/.dotfiles/bash/prompts ] && . ~/.dotfiles/bash/prompts
 
-unset me
-unset here
-
 # ignoredups:  causes lines matching the previous history entry to not be saved
 # ignorespace: lines which begin with a space character are not saved in the
 #              history list
