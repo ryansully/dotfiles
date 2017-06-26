@@ -2,47 +2,19 @@
 
 tstamp=`date +%Y%m%d%H%M%S`
 
+# install packages
 case `uname` in
     "Linux")
-        sudo apt-get update && sudo apt-get upgrade
-        sudo apt-get install git python-pip python3-pip
-
-        sudo apt-get install fortune-mod fortunes-off
+        . ./install/apt.sh
         ;;
     "Darwin")
-        # install Homebrew
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-        # upgrade Bash
-        brew update && brew install bash
-        sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-        chsh -s /usr/local/bin/bash
-
-        # Homebrew will also install Setuptools, pip, pip3
-        brew install git python python3
-
-        brew install fortune
+        . ./install/brew.sh
         ;;
 esac
 
 [ `which pip3` ] && sudo pip3 install -r pip/requirements.txt
 [ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
 [ `which gem` ] && sudo gem install lolcat
-
-# install Vim with Python 3 support
-if [ `uname` = "Darwin" ] && [ `which brew` ]; then
-    brew remove vim
-    brew cleanup
-    brew install vim --with-python3
-fi
-
-# install Source Code Pro font
-if [ `uname` = "Linux" ] && [ `which git` ]; then
-    FONT_HOME=~/.local/share/fonts
-    mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
-    git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git "$FONT_HOME/adobe-fonts/source-code-pro"
-    fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro"
-fi
 
 echo "Setting up .bashrc..."
 # backup original file
