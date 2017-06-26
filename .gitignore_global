@@ -12,3 +12,9 @@
 # https://raw.github.com/github/gitignore/master/Global/SVN.gitignore
 .svn/
 
+# https://raw.githubusercontent.com/github/gitignore/master/Global/VisualStudioCode.gitignore
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
