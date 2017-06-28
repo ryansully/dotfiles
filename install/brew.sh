@@ -27,4 +27,6 @@ brew cask install google-chrome
 brew cask install slack
 brew cask install visual-studio-code
 
+brew install dockutil
+
 brew install fortune
