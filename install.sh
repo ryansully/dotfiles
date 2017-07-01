@@ -49,6 +49,7 @@ setup_symlink() {
     ln -sv "$HOME/.dotfiles/$1" "$2"
 }
 setup_symlink ".gitconfig" "$HOME"
+setup_symlink ".gitignore_global" "$HOME"
 setup_symlink ".npmrc" "$HOME"
 setup_symlink ".scss-lint.yml" "$HOME"
 setup_symlink ".vim" "$HOME"

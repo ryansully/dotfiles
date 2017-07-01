@@ -33,7 +33,7 @@
 	ui = true
 [core]
 	editor = vim
-	excludesfile = ~/.dotfiles/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [diff]
 	guitool = meld
 [instaweb]
