@@ -18,7 +18,7 @@
 	lg = log --pretty=badass --graph
 	po = push origin
 	pom = push origin master
-	pr = pull --rebase
+	pr = pull --rebase --autostash
 	prs = !git pull --rebase && git submodule update --rebase
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream"
 	pur = !"git fetch origin -v; git fetch upstream -v; git rebase upstream"
