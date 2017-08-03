@@ -19,6 +19,7 @@
 	po = push origin
 	pom = push origin master
 	pr = pull --rebase --autostash
+	prom = !"git fetch -p && git rebase --autostash origin/master"
 	prs = !git pull --rebase && git submodule update --rebase
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream"
 	pur = !"git fetch origin -v; git fetch upstream -v; git rebase upstream"
