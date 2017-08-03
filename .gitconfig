@@ -24,6 +24,7 @@
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream"
 	pur = !"git fetch origin -v; git fetch upstream -v; git rebase upstream"
 	purs = !"git fetch origin -v; git fetch upstream -v; git rebase upstream; git submodule update --rebase"
+	pushf = push --force-with-lease
 	root = !pwd
 	scrap = !git reset --hard && git clean -df
 	st = status
