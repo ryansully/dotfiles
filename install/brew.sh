@@ -24,9 +24,11 @@ brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
 # install other packages
+brew install unar
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install slack
+brew cask install virtualbox
 brew cask install visual-studio-code
 
 brew install dockutil
