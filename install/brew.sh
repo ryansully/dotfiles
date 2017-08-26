@@ -33,6 +33,9 @@ brew cask install slack
 brew cask install virtualbox
 brew cask install visual-studio-code
 
+brew install ffmpeg
+brew install youtube-dl
+
 brew install dockutil
 
 brew install fortune
