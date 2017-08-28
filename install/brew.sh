@@ -25,6 +25,7 @@ brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
 # install other packages
+brew install tmux
 brew install unar
 brew install watchman # https://github.com/facebook/jest/issues/1767
 brew cask install dropbox

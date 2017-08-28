@@ -16,6 +16,10 @@ esac
 [ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
 [ `which gem` ] && sudo gem install lolcat
 
+# .tmux
+git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+ln -s -f "$HOME/.tmux/.tmux.conf" "$HOME"
+
 echo "Setting up .bashrc..."
 # backup original file
 cp -v ~/.bashrc ~/.bashrc.backup.$tstamp
@@ -52,6 +56,7 @@ setup_symlink ".gitconfig" "$HOME"
 setup_symlink ".gitignore_global" "$HOME"
 setup_symlink ".npmrc" "$HOME"
 setup_symlink ".scss-lint.yml" "$HOME"
+setup_symlink ".tmux.conf.local" "$HOME"
 setup_symlink ".vim" "$HOME"
 setup_symlink ".vimrc" "$HOME"
 setup_symlink "powerline" "$HOME/.config"

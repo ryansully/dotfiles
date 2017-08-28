@@ -11,4 +11,6 @@ mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
 git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git "$FONT_HOME/adobe-fonts/source-code-pro"
 fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro"
 
+sudo apt install tmux
+
 sudo apt install fortune-mod fortunes-off
