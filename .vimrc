@@ -85,3 +85,14 @@ set laststatus=2  " Always show statusline
 set t_Co=256      " Use 256 colours
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode    " Hide default mode text (e.g. -- INSERT -- below statusline)
+
+" Powerline Escape Fix
+" https://medium.com/usevim/powerline-escape-fix-e849fd07aad0
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
