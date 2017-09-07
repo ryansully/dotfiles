@@ -62,6 +62,7 @@ setup_symlink ".vimrc" "$HOME"
 setup_symlink "powerline" "$HOME/.config"
 setup_symlink "sublime-text-2/User" "$HOME/.config/sublime-text-2/Packages"
 setup_symlink "sublime-text-3/User" "$HOME/.config/sublime-text-3/Packages"
+setup_symlink "ssh/rc" "$HOME/.ssh"
 
 echo "Installation complete!"
 echo "Restart your terminal to enjoy!"

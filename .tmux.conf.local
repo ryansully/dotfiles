@@ -282,3 +282,6 @@ if-shell -b '[ "$(echo "$TMUX_VERSION >= 2.1" | bc)" = 1 ]' \
 # UTF8 is autodetected in 2.2 onwards, but errors if explicitly set
 if-shell -b '[ "$(echo "$TMUX_VERSION < 2.2" | bc)" = 1 ]' \
   "set -g utf8 on; set -g status-utf8 on; set -g mouse-utf8 on"
+
+# Use a symlink to look up SSH authentication
+set-environment -g 'SSH_AUTH_SOCK' ~/.ssh/ssh_auth_sock
