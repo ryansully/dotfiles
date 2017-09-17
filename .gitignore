@@ -5,4 +5,4 @@ SublimeMRU.sublime-settings
 *.tmTheme
 Color Highlighter
 .SublimeREPLHistory
-
+.vim/plugged
