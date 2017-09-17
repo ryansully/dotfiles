@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'chriskempson/base16-vim'
+Plug 'tomasiser/vim-code-dark'
 
 " Initialize plugin system
 call plug#end()
