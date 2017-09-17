@@ -20,6 +20,9 @@ esac
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f "$HOME/.tmux/.tmux.conf" "$HOME"
 
+# Base16 Shell
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
 echo "Setting up .bashrc..."
 # backup original file
 cp -v ~/.bashrc ~/.bashrc.backup.$tstamp

@@ -5,13 +5,6 @@ set nocompatible " don't behave Vi-compatible
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if &t_Co >= 256
-    colorscheme twilight256
-endif
-if has("gui_running")
-    colorscheme twilight
-endif
-
 set background=dark               " "dark" or "light", used for highlight colors
 set cursorline                    " highlight the screen line of the cursor
 set guifont=Source\ Code\ Pro\ 12 " Name(s) of font(s) to be used
@@ -26,8 +19,8 @@ set ruler  " show cursor line and column in the status line
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-    syntax on    " syntax highlighting
-    set hlsearch " highlight matches with last search pattern
+  syntax on    " syntax highlighting
+  set hlsearch " highlight matches with last search pattern
 endif
 
 " right margin
@@ -66,13 +59,24 @@ set noswapfile " don't use a swapfile for a buffer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ignorecase " ignore case in search patterns
 if has("autocmd")
-    " Enable file type detection.
-    " Use the default filetype settings, so that mail gets 'tw' set to 72,
-    " 'cindent' is on in C files, etc.
-    " Also load indent files, to automatically do language-dependent indenting.
-    filetype plugin indent on
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
 endif
 
+" Vim Plug
+if filereadable(expand("~/.vim/plugins.vim"))
+  source ~/.vim/plugins.vim
+endif
+
+" Colors
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+syntax enable " enable syntax processing
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
