@@ -96,6 +96,8 @@
 " }}}
 
 " {{{ folding
+  " value for 'foldlevel' when starting to edit a file
+  set foldlevelstart=10
   " folding type: "manual", "indent", "expr", "marker" or "syntax"
   set foldmethod=indent
 " }}}
