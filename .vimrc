@@ -58,7 +58,7 @@
   " highlight all matches for the last used search pattern
   set hlsearch
   " highlight the screen column of the cursor
-  set cursorcolumn
+  "set cursorcolumn
   " highlight the screen line of the cursor
   set cursorline
   " columns to highlight
