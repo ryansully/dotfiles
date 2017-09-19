@@ -19,7 +19,7 @@
 " }}}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Options {{{
+" Options
 "
 " The following sections match those found in option-window (:options)
 " Full list of options: http://vimhelp.appspot.com/quickref.txt.html#option-list
@@ -120,8 +120,6 @@
   " command-line completion shows a list of matches
   set wildmenu
 " }}}
-
-" }}} /Options
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline {{{
