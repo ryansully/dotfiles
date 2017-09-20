@@ -13,4 +13,9 @@ fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro"
 
 sudo apt install tmux
 
+# install ripgrep
+sudo add-apt-repository ppa:x4121/ripgrep
+sudo apt-get update
+sudo apt-get install ripgrep
+
 sudo apt install fortune-mod fortunes-off
