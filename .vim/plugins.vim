@@ -17,8 +17,8 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
-Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-fugitive'
+Plug 'w0rp/ale'
 Plug 'yggdroot/indentline'
 
 " Initialize plugin system
@@ -54,14 +54,3 @@ let g:gitgutter_realtime = 250
 " indentLine
 let g:indentLine_char = '▏'
 let g:indentLine_leadingSpaceEnabled = 1
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
