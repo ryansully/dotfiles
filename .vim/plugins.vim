@@ -51,7 +51,14 @@ let g:ctrlp_custom_ignore = {
 
 " Emmet
 " enable all function in all mode
-let g:user_emmet_mode='a'
+let g:user_emmet_mode = 'a'
+let g:user_emmet_leader_key = '<Tab>'
+" fix Emmet in JSX
+let g:user_emmet_settings = {
+\ 'javascript.jsx': {
+\   'extends': 'jsx',
+\ },
+\}
 
 " GitGutter
 let g:gitgutter_realtime = 250
