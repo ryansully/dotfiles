@@ -27,6 +27,11 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings
 
+" Ale
+let g:ale_open_list = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
 " CtrlP
 " from https://elliotekj.com/2016/11/22/setup-ctrlp-to-use-ripgrep-in-vim/
 if executable('rg')
