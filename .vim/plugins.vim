@@ -21,6 +21,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'yggdroot/indentline'
 
+" language packs
+Plug 'sheerun/vim-polyglot'
+
 " Initialize plugin system
 call plug#end()
 
@@ -66,3 +69,10 @@ let g:gitgutter_realtime = 250
 " indentLine
 let g:indentLine_char = '▏'
 let g:indentLine_leadingSpaceEnabled = 1
+
+" JavaScript
+let g:javascript_plugin_jsdoc = 1
+let g:jsx_ext_required = 0
+
+" JSON
+let g:vim_json_syntax_conceal = 0
