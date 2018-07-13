@@ -160,13 +160,13 @@ prompt_me() {
 }
 
 # Powerline
-powerline_path=$(python3 -c 'import imp; print(imp.find_module("powerline")[1])')
-if [ -d $powerline_path ]; then
+repository_root=$(python3 -c 'import site; print(site.getusersitepackages())')
+if [ -d $repository_root/powerline ]; then
     powerline-daemon -q
     POWERLINE_BASH_CONTINUATION=1
     POWERLINE_BASH_SELECT=1
     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
-    . $powerline_path/bindings/bash/powerline.sh
+    . $repository_root/powerline/bindings/bash/powerline.sh
 else
     prompt_me # it's no powerline, but I designed it and it has served me well
 fi
