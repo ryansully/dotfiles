@@ -62,10 +62,10 @@
   " highlight the screen line of the cursor
   set cursorline
   " columns to highlight
-  set colorcolumn=81,101
-  " highlight text after column 100
-  highlight Right100 ctermbg=darkred ctermfg=white guibg=#592929
-  match Right100 /\%101v.\+/
+  set colorcolumn=81,121
+  " highlight text after column 120
+  highlight Right120 ctermbg=darkred ctermfg=white guibg=#592929
+  match Right120 /\%121v.\+/
 " }}}
 
 " {{{ messages and info
