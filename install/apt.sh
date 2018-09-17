@@ -5,6 +5,9 @@ sudo apt update && sudo apt upgrade
 # install pip, pip3
 sudo apt install git python-pip python3-pip
 
+# install FiraCode font
+sudo apt install fonts-firacode
+
 # install Source Code Pro font
 FONT_HOME=~/.local/share/fonts
 mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"

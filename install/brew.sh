@@ -20,8 +20,9 @@ brew install vim --with-python3
 # install Cask
 brew tap caskroom/cask
 
-# install Source Code Pro font
+# install FiraCode and Source Code Pro font
 brew tap caskroom/fonts
+brew cask install font-fira-code
 brew cask install font-source-code-pro
 
 # install other packages
