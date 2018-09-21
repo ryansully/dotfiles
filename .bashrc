@@ -28,4 +28,5 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+source $(dirname $(gem which colorls))/tab_complete.sh
 [ `which fortune` ] && [ `which lolcat` ] && fortune | lolcat # :)
