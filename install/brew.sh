@@ -33,6 +33,7 @@ brew install watchman # https://github.com/facebook/jest/issues/1767
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install slack
+brew cask install sublime-text
 brew cask install virtualbox
 brew cask install visual-studio-code
 

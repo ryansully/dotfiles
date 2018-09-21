@@ -15,6 +15,7 @@ esac
 [ `which pip3` ] && sudo pip3 install -r pip/requirements.txt
 [ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
 [ `which gem` ] && sudo gem install lolcat
+[ `which gem` ] && sudo gem install colorls
 
 # .tmux
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
@@ -63,9 +64,17 @@ setup_symlink ".tmux.conf.local" "$HOME"
 setup_symlink ".vim" "$HOME"
 setup_symlink ".vimrc" "$HOME"
 setup_symlink "powerline" "$HOME/.config"
-setup_symlink "sublime-text-2/User" "$HOME/.config/sublime-text-2/Packages"
-setup_symlink "sublime-text-3/User" "$HOME/.config/sublime-text-3/Packages"
 setup_symlink "ssh/rc" "$HOME/.ssh"
+
+# symlink Sublime Text
+case `uname` in
+    "Linux")
+        setup_symlink "sublime-text-3/User" "$HOME/.config/sublime-text-3/Packages"
+        ;;
+    "Darwin")
+        setup_symlink "sublime-text-3/User" "$HOME/Library/Application Support/Sublime Text 3/Packages"
+        ;;
+esac
 
 echo "Installation complete!"
 echo "Restart your terminal to enjoy!"
