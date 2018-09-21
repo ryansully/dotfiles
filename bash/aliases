@@ -15,7 +15,7 @@ alias la='ls -A'
 
 # cd
 c() {
-    cd $1;
+    cd "$@";
     ls;
 }
 alias cd="c"
