@@ -42,4 +42,5 @@ brew install youtube-dl
 
 brew install dockutil
 
+brew install neofetch
 brew install fortune

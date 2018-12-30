@@ -63,6 +63,7 @@ setup_symlink ".scss-lint.yml" "$HOME"
 setup_symlink ".tmux.conf.local" "$HOME"
 setup_symlink ".vim" "$HOME"
 setup_symlink ".vimrc" "$HOME"
+setup_symlink "neofetch" "$HOME/.config"
 setup_symlink "powerline" "$HOME/.config"
 setup_symlink "ssh/rc" "$HOME/.ssh"
 
