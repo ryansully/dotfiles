@@ -28,7 +28,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-source $(dirname $(gem which colorls))/tab_complete.sh
+[ `which colorls` ] && source $(dirname $(gem which colorls))/tab_complete.sh
 
 NEOFETCH_ASCII=`[ -f $HOME/.config/neofetch/ascii.local ] && echo "--ascii $HOME/.config/neofetch/ascii.local"`
 [ `which neofetch` ] && neofetch $NEOFETCH_ASCII
