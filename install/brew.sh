@@ -1,46 +1,35 @@
 #!/usr/bin/env bash
 
 # install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+[ `which brew` ] || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Turn off Homebrew’s analytics.
 brew analytics off
 
-# upgrade Bash
-brew update && brew install bash
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-chsh -s /usr/local/bin/bash
+if [ `which bash` = '/bin/bash' ]; then
+  # upgrade Bash
+  brew update && brew install bash
+  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+  chsh -s /usr/local/bin/bash
+fi
 
-# Homebrew will also install Setuptools, pip, pip3
-brew install git python python3
+# Install Homebrew Bundle
+brew tap Homebrew/bundle
 
-# install Vim with Python 3 support
-brew remove vim
-brew cleanup
-brew install vim --with-python3
+# Ask for the administrator password upfront
+sudo -v
 
-# install Cask
-brew tap caskroom/cask
+# Keep-alive: update existing `sudo` time stamp until the script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# install FiraCode and Source Code Pro font
-brew tap caskroom/fonts
-brew cask install font-fira-code
-brew cask install font-source-code-pro
+# Make sure we are using the latest Homebrew
+brew update
 
-# install other packages
-brew install ripgrep
-brew install tmux
-brew install unar
-brew install watchman # https://github.com/facebook/jest/issues/1767
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install slack
-brew cask install sublime-text
-brew cask install virtualbox
-brew cask install visual-studio-code
+# Upgrade existing packages
+brew upgrade
 
-brew install ffmpeg
-brew install youtube-dl
+# Install CLI tools & GUI applications
+brew bundle --file=Brewfile
 
-brew install dockutil
-
-brew install neofetch
-brew install fortune
+# Remove outdated versions from the cellar including casks
+brew cleanup && brew prune

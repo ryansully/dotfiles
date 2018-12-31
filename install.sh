@@ -8,7 +8,7 @@ case `uname` in
         . ./install/apt.sh
         ;;
     "Darwin")
-        . ./install/brew.sh
+        ./install/brew.sh
         ;;
 esac
 
