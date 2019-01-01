@@ -1,0 +1,28 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    clocale (0.0.4)
+    colorls (1.1.1)
+      clocale
+      filesize
+      manpages
+      rainbow
+    filesize (0.2.0)
+    lolcat (99.9.20)
+      manpages (~> 0.6.1)
+      optimist (~> 3.0.0)
+      paint (~> 2.0.0)
+    manpages (0.6.1)
+    optimist (3.0.0)
+    paint (2.0.3)
+    rainbow (3.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorls
+  lolcat
+
+BUNDLED WITH
+   1.17.3

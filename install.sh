@@ -14,8 +14,7 @@ esac
 
 [ `which pip3` ] && sudo pip3 install -r pip/requirements.txt
 [ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
-[ `which gem` ] && sudo gem install lolcat
-[ `which gem` ] && sudo gem install colorls
+./install/ruby.sh
 
 # .tmux
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
