@@ -1,3 +1,5 @@
+# run `brew bundle dump --force` to regenerate this list
+
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -17,6 +19,7 @@ brew "mas"
 brew "neofetch"
 brew "node@8"
 brew "openssl@1.1"
+brew "rbenv"
 brew "ripgrep"
 brew "socat"
 brew "sphinx-doc"

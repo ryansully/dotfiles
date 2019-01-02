@@ -8,6 +8,9 @@
 [ -d $HOME/.npm-packages/bin ] && PATH="$HOME/.npm-packages/bin:$PATH"
 export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
 
+# rbenv path
+[ -d $HOME/.rbenv/bin ] && PATH="$HOME/.rbenv/bin:$PATH"
+
 # Android SDK
 [ -d $HOME/Development/adt-bundle-linux-x86_64/sdk ] && export PATH="${PATH}:$HOME/Development/adt-bundle-linux-x86_64/sdk/tools:$HOME/Development/adt-bundle-linux-x86_64/sdk/platform-tools"
 

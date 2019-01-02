@@ -28,6 +28,8 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+[ `which rbenv` ] && eval "$(rbenv init -)"
+
 [ `which colorls` ] && source $(dirname $(gem which colorls))/tab_complete.sh
 
 NEOFETCH_ASCII=`[ -f $HOME/.config/neofetch/ascii.local ] && echo "--ascii $HOME/.config/neofetch/ascii.local"`
