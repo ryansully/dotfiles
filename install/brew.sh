@@ -29,7 +29,7 @@ brew update
 brew upgrade
 
 # Install CLI tools & GUI applications
-brew bundle --file=Brewfile
+brew bundle --file=~/.dotfiles/install/Brewfile
 
 # Remove outdated versions from the cellar including casks
 brew cleanup && brew prune

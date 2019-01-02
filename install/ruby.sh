@@ -17,5 +17,5 @@ fi
 # Install gems from Gemfile
 gem install bundler
 rbenv rehash
-bundle install --gemfile=Gemfile --system
+bundle install --gemfile=~/.dotfiles/install/Gemfile --system
 rbenv rehash
