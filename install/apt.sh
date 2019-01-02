@@ -8,11 +8,26 @@ sudo apt install git python-pip python3-pip
 # install FiraCode font
 sudo apt install fonts-firacode
 
+FONT_HOME=$HOME/.local/share/fonts
+mkdir -p "$FONT_HOME"
+firacode_nerd_fonts=(
+  Bold/complete/Fura%20Code%20Bold%20Nerd%20Font%20Complete.otf
+  Light/complete/Fura%20Code%20Light%20Nerd%20Font%20Complete.otf
+  Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete.otf
+  Regular/complete/Fura%20Code%20Regular%20Nerd%20Font%20Complete.otf
+  Retina/complete/Fura%20Code%20Retina%20Nerd%20Font%20Complete.otf
+)
+
+for font in "${firacode_nerd_fonts[@]}"; do
+  wget "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/$font" -P "$FONT_HOME"
+done
+
 # install Source Code Pro font
-FONT_HOME=~/.local/share/fonts
 mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
 git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git "$FONT_HOME/adobe-fonts/source-code-pro"
-fc-cache -f -v "$FONT_HOME/adobe-fonts/source-code-pro"
+
+# rebuild font cache
+fc-cache -f -v "$FONT_HOME"
 
 sudo apt install tmux
 
