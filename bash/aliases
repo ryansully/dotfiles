@@ -14,11 +14,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 
 # cd
-c() {
-    cd "$@";
+cd() {
+    builtin cd "$@";
     ls;
 }
-alias cd="c"
 alias ..='cd ..'
 alias gitroot='cd `git root`'
 
