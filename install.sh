@@ -63,6 +63,7 @@ setup_symlink ".vim" "$HOME"
 setup_symlink ".vimrc" "$HOME"
 setup_symlink "neofetch" "$HOME/.config"
 setup_symlink "powerline" "$HOME/.config"
+setup_symlink "ssh/config" "$HOME/.ssh"
 setup_symlink "ssh/rc" "$HOME/.ssh"
 
 # symlink Sublime Text

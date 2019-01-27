@@ -1,0 +1,7 @@
+IgnoreUnknown AddKeysToAgent,UseKeychain
+
+AddKeysToAgent yes
+IdentityFile ~/.ssh/id_rsa
+UseKeychain yes
+
+Include ~/.ssh/config.local
