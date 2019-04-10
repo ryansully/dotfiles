@@ -57,6 +57,7 @@ setup_symlink() {
 }
 setup_symlink ".gitconfig" "$HOME"
 setup_symlink ".gitignore_global" "$HOME"
+setup_symlink ".hyper.js" "$HOME"
 setup_symlink ".npmrc" "$HOME"
 setup_symlink ".tmux.conf.local" "$HOME"
 setup_symlink ".vim" "$HOME"
