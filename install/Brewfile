@@ -3,6 +3,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 
 brew "bash"
@@ -54,6 +55,7 @@ cask "steam"
 cask "sublime-text"
 cask "virtualbox"
 cask "visual-studio-code"
+cask "visual-studio-code-insiders"
 cask "vlc"
 cask "webpack-dashboard"
 
