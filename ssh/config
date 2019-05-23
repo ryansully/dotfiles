@@ -4,9 +4,4 @@ AddKeysToAgent yes
 IdentityFile ~/.ssh/id_rsa
 UseKeychain yes
 
-Host *
-  ControlMaster auto
-  ControlPath ~/.ssh/sockets/%r@%h-%p
-  ControlPersist 5
-
 Include ~/.ssh/config.d/*
