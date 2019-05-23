@@ -1,58 +1,33 @@
 #!/usr/bin/env bash
 
+UBUNTU_VERSION=$(lsb_release -rs)
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 sudo apt update && sudo apt upgrade
 
-# install pip, pip3
-sudo apt install git python-pip python3-pip
-
-# install FiraCode font
-sudo apt install fonts-firacode
-
-FONT_HOME=$HOME/.local/share/fonts
-mkdir -p "$FONT_HOME"
-firacode_nerd_fonts=(
-  Bold/complete/Fura%20Code%20Bold%20Nerd%20Font%20Complete.otf
-  Light/complete/Fura%20Code%20Light%20Nerd%20Font%20Complete.otf
-  Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete.otf
-  Regular/complete/Fura%20Code%20Regular%20Nerd%20Font%20Complete.otf
-  Retina/complete/Fura%20Code%20Retina%20Nerd%20Font%20Complete.otf
-)
-
-for font in "${firacode_nerd_fonts[@]}"; do
-  wget "https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/$font" -P "$FONT_HOME"
-done
-
-# install Source Code Pro font
-mkdir -p "$FONT_HOME/adobe-fonts/source-code-pro"
-git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git "$FONT_HOME/adobe-fonts/source-code-pro"
-
-# rebuild font cache
-fc-cache -f -v "$FONT_HOME"
-
-sudo apt install tmux
+[ `which snap` ] || (sudo apt update && sudo apt install snapd)
 
 # install ripgrep
-sudo add-apt-repository ppa:x4121/ripgrep
-sudo apt-get update
-sudo apt-get install ripgrep
-
-# Sublime Text
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
-
-# Visual Studio Code
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install code # or code-insiders
+if (( `echo "$UBUNTU_VERSION < 18.10" | bc` )); then
+  # Ubuntu Trusty, Xenial, Bionic
+  # https://github.com/x4121/ripgrep-ubuntu#pre-build
+  sudo add-apt-repository ppa:x4121/ripgrep && sudo apt update
+fi
 
 # neofetch
-# sudo add-apt-repository ppa:dawidd0811/neofetch && sudo apt update # 16.10 and below
-sudo apt install neofetch
+if (( `echo "$UBUNTU_VERSION <= 16.10" | bc` )); then
+  # Ubuntu 16.10 and below needs PPA
+  # https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu-1610-and-below
+  sudo add-apt-repository ppa:dawidd0811/neofetch && sudo apt update
+fi
 
-sudo apt install fortune-mod fortunes-off
+# dpkg --get-selections > apt-packages.txt
+sudo apt update && xargs -a apt-packages.txt sudo apt install
+
+# install desktop packages
+[ `dpkg -l ubuntu-desktop` ] && ./apt-desktop.sh
