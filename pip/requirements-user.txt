@@ -2,3 +2,4 @@ ipdb
 ipython
 powerline-gitstatus
 powerline-status
+youtube_dl
