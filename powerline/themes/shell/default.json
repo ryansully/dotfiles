@@ -5,7 +5,8 @@
         "function": "powerline.segments.common.net.hostname",
         "priority": 10,
         "args": {
-          "only_if_ssh": true
+          "only_if_ssh": true,
+          "exclude_domain": true
         }
       },
       {
