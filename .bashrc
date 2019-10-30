@@ -30,6 +30,9 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+# Fix SSH auth socket location so agent forwarding works with tmux and VS Code
+export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
+
 [ `which rbenv` ] && eval "$(rbenv init -)"
 
 [ `which colorls` ] && source $(dirname $(gem which colorls))/tab_complete.sh
