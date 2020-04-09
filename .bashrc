@@ -33,6 +33,9 @@ fi
 # Fix SSH auth socket location so agent forwarding works with tmux and VS Code
 export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
 
+[ `which pyenv` ] && eval "$(pyenv init -)"
+[ `which pyenv` ] && eval "$(pyenv virtualenv-init -)"
+
 [ `which rbenv` ] && eval "$(rbenv init -)"
 
 [ `which colorls` ] && source $(dirname $(gem which colorls))/tab_complete.sh

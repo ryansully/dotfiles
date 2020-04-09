@@ -12,6 +12,7 @@ case `uname` in
         ;;
 esac
 
+./install/python.sh
 [ `which pip3` ] && sudo pip3 install -r pip/requirements.txt
 [ `which pip3` ] && pip3 install --user -r pip/requirements-user.txt
 ./install/ruby.sh
