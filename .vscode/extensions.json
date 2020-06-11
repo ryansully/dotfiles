@@ -1,0 +1,36 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    "auchenberg.vscode-browser-preview",
+    "compulim.vscode-clock",
+    "dbaeumer.vscode-eslint",
+    "dsznajder.es7-react-js-snippets",
+    "eamodio.gitlens",
+    "hoovercj.vscode-power-mode",
+    "ibm.output-colorizer",
+    "icrawl.discord-vscode",
+    "johnpapa.vscode-peacock",
+    "kamikillerto.vscode-colorize",
+    "max-ss.cyberpunk",
+    "msjsdiag.debugger-for-chrome",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "ms-vsliveshare.vsliveshare-pack",
+    "mutantdino.resourcemonitor",
+    "oderwat.indent-rainbow",
+    "orta.vscode-jest",
+    "pflannery.vscode-versionlens",
+    "pkief.material-icon-theme",
+    "pnp.polacode",
+    "ryu1kn.partial-diff",
+    "shan.code-settings-sync",
+    "stylelint.vscode-stylelint",
+    "webrender.synthwave-x-fluoromachine"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": [
+
+  ]
+}
