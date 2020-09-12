@@ -2,7 +2,7 @@ bash-completion
 build-essential
 chromium-browser
 curl
-dconf-tools
+dconf-cli
 devscripts
 fortune-mod
 fortunes-off
@@ -10,7 +10,6 @@ gconf-editor
 gdebi
 git
 neofetch
-python-pip
 python3-pip
 ripgrep
 synaptic

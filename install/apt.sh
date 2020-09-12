@@ -27,7 +27,7 @@ if (( `echo "$UBUNTU_VERSION <= 16.10" | bc` )); then
 fi
 
 # dpkg --get-selections > apt-packages.txt
-sudo apt update && xargs -a apt-packages.txt sudo apt install
+sudo apt update && xargs -a ~/.dotfiles/install/apt-packages.txt sudo apt install
 
 # install desktop packages
 [ `dpkg -l ubuntu-desktop` ] && ./apt-desktop.sh
