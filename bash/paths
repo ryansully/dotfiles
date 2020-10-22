@@ -19,5 +19,5 @@ export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
 
 if [ `uname` = "Darwin" ]; then
     [ -d "$HOME/Library/Python/2.7/bin" ] && PATH="$HOME/Library/Python/2.7/bin:$PATH"
-    [ -d "$HOME/Library/Python/3.7/bin" ] && PATH="$HOME/Library/Python/3.7/bin:$PATH"
+    [ -d "$HOME/Library/Python/3.9/bin" ] && PATH="$HOME/Library/Python/3.9/bin:$PATH"
 fi
