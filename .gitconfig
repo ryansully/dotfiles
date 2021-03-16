@@ -15,6 +15,7 @@
 	depth = rev-parse --show-cdup
 	df = diff
 	dfa = !`git config diff.guitool` . &
+	gcp = gc --prune=now
 	lg = log --pretty=badass --graph
 	po = push origin
 	pom = push origin master
