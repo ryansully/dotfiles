@@ -15,13 +15,12 @@
 	depth = rev-parse --show-cdup
 	df = diff
 	dfa = !`git config diff.guitool` . &
-	fro = !"git fetch -p && git rebase --autostash"
-	from = fro origin/master
 	gcp = gc --prune=now
 	lg = log --pretty=badass --graph
 	po = push origin
 	pom = push origin master
 	pr = pull --rebase --autostash
+	prom = !"git fetch -p && git rebase --autostash origin/master"
 	prs = !git pull --rebase && git submodule update --rebase
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream"
 	pur = !"git fetch origin -v; git fetch upstream -v; git rebase upstream"
