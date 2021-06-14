@@ -31,7 +31,7 @@ brew "vim"
 brew "watchman" # https://github.com/facebook/jest/issues/1767
 brew "yarn"
 brew "youtube-dl"
-
+cask "barrier"
 cask "beardedspice"
 cask "ckb-next"
 cask "discord"
