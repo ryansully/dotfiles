@@ -8,8 +8,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors {{{
   if $TERM_PROGRAM == 'vscode'
-    " Use matching color scheme for VS Code Integrated Terminal
-    colorscheme codedark
+    " Use matching color scheme for VS Code Integrated Terminal, if it exists
+    :silent! colorscheme codedark
   elseif filereadable(expand("~/.vimrc_background"))
     let base16colorspace=256
     source ~/.vimrc_background
