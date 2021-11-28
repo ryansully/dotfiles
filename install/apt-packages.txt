@@ -4,6 +4,7 @@ chromium-browser
 curl
 dconf-cli
 devscripts
+ffmpeg
 fortune-mod
 fortunes-off
 gconf-editor
