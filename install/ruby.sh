@@ -2,7 +2,7 @@
 
 # install rbenv
 if [ ! `which rbenv` ]; then
-  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+  curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
   . ~/.bashrc
 fi
 
