@@ -17,20 +17,21 @@
 	dfa = !`git config diff.guitool` . &
 	gcp = gc --prune=now
 	lg = log --pretty=badass --graph
+	main = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
 	po = push origin
-	pom = push origin master
+	pom = !git po $(git main)
 	pr = pull --rebase --autostash
-	prom = pr origin master
+	prom = !git pr origin $(git main)
 	prs = !git pull --rebase && git submodule update --rebase
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream"
 	pur = !"git fetch origin -v; git fetch upstream -v; git rebase upstream"
 	purs = !"git fetch origin -v; git fetch upstream -v; git rebase upstream; git submodule update --rebase"
 	pushf = push --force-with-lease
-	rbi = rebase -i origin/master
+	rbi = !git rebase -i origin/$(git main)
 	root = !pwd
 	scrap = !git reset --hard && git clean -df
 	st = status
-	sync = !"git fetch upstream; git checkout master; git merge upstream/master"
+	sync = !"git fetch upstream; git checkout $(git main); git merge upstream/$(git main)"
 	undo = reset --soft HEAD^
 	unstage = reset HEAD
 [color]
