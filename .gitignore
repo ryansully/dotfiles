@@ -15,3 +15,5 @@ oscrypto-ca-bundle.crt
 bh_unicode_properties.cache
 
 neofetch/ascii.local
+
+Brewfile.lock.json
