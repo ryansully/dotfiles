@@ -4,7 +4,6 @@
 
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
-    "auchenberg.vscode-browser-preview",
     "compulim.vscode-clock",
     "dbaeumer.vscode-eslint",
     "dsznajder.es7-react-js-snippets",
@@ -15,7 +14,8 @@
     "johnpapa.vscode-peacock",
     "kamikillerto.vscode-colorize",
     "max-ss.cyberpunk",
-    "msjsdiag.debugger-for-chrome",
+    "ms-vscode.js-debug",
+    "ms-vscode.live-server",
     "ms-vscode-remote.vscode-remote-extensionpack",
     "ms-vsliveshare.vsliveshare-pack",
     "mutantdino.resourcemonitor",
@@ -25,7 +25,6 @@
     "pkief.material-icon-theme",
     "pnp.polacode",
     "ryu1kn.partial-diff",
-    "shan.code-settings-sync",
     "stylelint.vscode-stylelint",
     "webrender.synthwave-x-fluoromachine"
   ],
