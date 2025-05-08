@@ -5,9 +5,10 @@ tstamp=`date +%Y%m%d%H%M%S`
 # install packages
 case `uname` in
     "Linux")
-        . ./install/apt.sh
+        ./install/apt.sh
         ;;
     "Darwin")
+        xcode-select --install
         ./install/brew.sh
         ;;
 esac
