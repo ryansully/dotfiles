@@ -40,7 +40,6 @@ export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
 
 [ `which colorls` ] && source $(dirname $(gem which colorls))/tab_complete.sh
 
-NEOFETCH_ASCII=`[ -f $HOME/.config/neofetch/ascii.local ] && echo "--ascii $HOME/.config/neofetch/ascii.local"`
-[ `which neofetch` ] && neofetch $NEOFETCH_ASCII
+[ `which fastfetch` ] && fastfetch
 
 [ `which fortune` ] && [ `which lolcat` ] && fortune | lolcat # :)

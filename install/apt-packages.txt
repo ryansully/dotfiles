@@ -4,13 +4,13 @@ chromium-browser
 curl
 dconf-cli
 devscripts
+fastfetch
 ffmpeg
 fortune-mod
 fortunes-off
 gconf-editor
 gdebi
 git
-neofetch
 python3-pip
 ripgrep
 synaptic

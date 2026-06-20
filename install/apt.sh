@@ -19,12 +19,8 @@ if (( `echo "$UBUNTU_VERSION < 18.10" | bc` )); then
   sudo add-apt-repository ppa:x4121/ripgrep && sudo apt update
 fi
 
-# neofetch
-if (( `echo "$UBUNTU_VERSION <= 16.10" | bc` )); then
-  # Ubuntu 16.10 and below needs PPA
-  # https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu-1610-and-below
-  sudo add-apt-repository ppa:dawidd0811/neofetch && sudo apt update
-fi
+# fastfetch
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch && sudo apt update
 
 # dpkg --get-selections > apt-packages.txt
 sudo apt update && xargs -a ~/.dotfiles/install/apt-packages.txt sudo apt install
