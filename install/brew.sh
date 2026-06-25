@@ -13,9 +13,6 @@ if [ `which bash` = '/bin/bash' ]; then
   chsh -s /usr/local/bin/bash
 fi
 
-# Install Homebrew Bundle
-brew tap Homebrew/bundle
-
 # Ask for the administrator password upfront
 sudo -v
 
