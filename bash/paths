@@ -18,6 +18,8 @@ export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
 [ -d $HOME/Development/adt-bundle-linux-x86_64/sdk ] && export PATH="${PATH}:$HOME/Development/adt-bundle-linux-x86_64/sdk/tools:$HOME/Development/adt-bundle-linux-x86_64/sdk/platform-tools"
 
 if [ `uname` = "Darwin" ]; then
-    [ -d "$HOME/Library/Python/2.7/bin" ] && PATH="$HOME/Library/Python/2.7/bin:$PATH"
-    [ -d "$HOME/Library/Python/3.13/bin" ] && PATH="$HOME/Library/Python/3.13/bin:$PATH"
+    PYTHON2_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+    PYTHON3_VERSION=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+    [ -d "$HOME/Library/Python/$PYTHON2_VERSION/bin" ] && PATH="$HOME/Library/Python/$PYTHON2_VERSION/bin:$PATH"
+    [ -d "$HOME/Library/Python/$PYTHON3_VERSION/bin" ] && PATH="$HOME/Library/Python/$PYTHON3_VERSION/bin:$PATH"
 fi
