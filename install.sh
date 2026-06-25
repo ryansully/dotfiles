@@ -67,6 +67,7 @@ setup_symlink ".vimrc" "$HOME"
 setup_symlink "powerline" "$HOME/.config"
 setup_symlink "ssh/config" "$HOME/.ssh"
 setup_symlink "ssh/rc" "$HOME/.ssh"
+setup_symlink "starship.toml" "$HOME/.config"
 
 # symlink Sublime Text
 case `uname` in

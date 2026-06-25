@@ -143,8 +143,7 @@ _ps1_virtualenv() {
 # 1. set the terminal title to user@host:dir
 # 2. virtualenv
 # 3. red exit status if above zero (don't display if zero)
-# 4. blue dir, uses basename if path exceeds 20 characters, because 2+ line
-#    prompts suck
+# 4. blue dir, uses basename if path exceeds 20 characters
 # 5. colored git prompt: displays current branch when inside a git repo
 #    clean:     (default color)
 #    dirty:     red *
@@ -159,14 +158,22 @@ prompt_me() {
     _ps1_git_vars
 }
 
-# Powerline
+function set_win_title(){
+    echo -ne "\033]0; $USER@$HOSTNAME: $PWD \007"
+}
+
 repository_root=$(python3 -c 'import site; print(site.getusersitepackages())')
-if [ -d $repository_root/powerline ]; then
+if [ `which starship` ]; then
+    # Starship
+    starship_precmd_user_func="set_win_title"
+    eval "$(starship init bash)"
+elif [ -d $repository_root/powerline ]; then
+    # Powerline
     powerline-daemon -q
     POWERLINE_BASH_CONTINUATION=1
     POWERLINE_BASH_SELECT=1
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+    PROMPT_COMMAND='set_win_title()'
     . $repository_root/powerline/bindings/bash/powerline.sh
 else
-    prompt_me # it's no powerline, but I designed it and it has served me well
+    prompt_me # it's no starship or powerline, but I designed it and it has served me well
 fi
