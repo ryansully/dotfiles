@@ -1,10 +1,13 @@
 # run `brew bundle dump --force` to regenerate this list
 
+tap "deskflow/tap", trusted: true
+
 brew "bash"
 brew "bash-completion@2"
 brew "coreutils"
 brew "ctags"
 brew "curl"
+brew "deskflow"
 brew "dockutil"
 brew "fastfetch"
 brew "ffmpeg"
@@ -26,9 +29,9 @@ brew "vim"
 brew "watchman" # https://github.com/facebook/jest/issues/1767
 brew "yarn"
 
-cask "barrier"
 cask "beardedspice"
 cask "ckb-next"
+cask "deskflow/tap/deskflow"
 cask "discord"
 cask "dropbox"
 cask "firefox"
