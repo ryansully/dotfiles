@@ -4,6 +4,9 @@
 [ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
 [ -d $HOME/.local/bin ] && PATH="$HOME/.local/bin:$PATH"
 
+# GNU bin (for brew install make)
+[ -d /usr/local/opt/make/libexec/gnubin ] && PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
 # NPM path
 [ -d $HOME/.npm-packages/bin ] && PATH="$HOME/.npm-packages/bin:$PATH"
 export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
