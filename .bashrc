@@ -36,6 +36,7 @@ export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
 [ `which pyenv` ] && eval "$(pyenv init -)"
 [ `which pyenv` ] && eval "$(pyenv virtualenv-init -)"
 
+# Ruby
 [ `which rbenv` ] && eval "$(rbenv init -)"
 
 [ `which colorls` ] && source $(dirname $(gem which colorls))/tab_complete.sh
