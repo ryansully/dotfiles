@@ -24,17 +24,13 @@ export TERM='xterm-256color'
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    export PROJECT_HOME=$HOME/Projects
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
-
 # Fix SSH auth socket location so agent forwarding works with tmux and VS Code
 export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
 
-[ `which pyenv` ] && eval "$(pyenv init -)"
-[ `which pyenv` ] && eval "$(pyenv virtualenv-init -)"
+# Python
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 
 # Ruby
 [ `which rbenv` ] && eval "$(rbenv init -)"
