@@ -7,9 +7,5 @@
 # GNU bin (for brew install make)
 [ -d /usr/local/opt/make/libexec/gnubin ] && PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
-# NPM path
-[ -d $HOME/.npm-packages/bin ] && PATH="$HOME/.npm-packages/bin:$PATH"
-export NODE_PATH=$NODE_PATH:$HOME/.npm-packages/lib/node_modules
-
 # Android SDK
 [ -d $HOME/Development/adt-bundle-linux-x86_64/sdk ] && export PATH="${PATH}:$HOME/Development/adt-bundle-linux-x86_64/sdk/tools:$HOME/Development/adt-bundle-linux-x86_64/sdk/platform-tools"

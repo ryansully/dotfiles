@@ -13,6 +13,7 @@ case `uname` in
         ;;
 esac
 
+./install/node.sh
 ./install/python.sh
 ./install/ruby.sh
 
