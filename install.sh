@@ -9,6 +9,7 @@ case `uname` in
         ;;
     "Darwin")
         xcode-select --install
+        ./install/port.sh # should probably install MacPorts separately first
         ./install/brew.sh
         ;;
 esac

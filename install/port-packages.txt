@@ -1,0 +1,25 @@
+bash
+bash-completion
+coreutils
+curl
+fastfetch
+ffmpeg
+fortune
+fswatch
+gettext
+git
+gmake
+go
+jq
+# requires a full Xcode installation
+#mas
+pipx
+rbenv
+ripgrep
+# To enable the rbenv subcommand 'install', install port ruby-build.
+ruby-build
+starship
+tmux
+# requires a full Xcode installation
+#unar
+vim +python314

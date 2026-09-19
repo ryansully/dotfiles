@@ -22,10 +22,14 @@ shopt -s globstar
 # 256 colors in terminal
 export TERM='xterm-256color'
 
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
 # Fix SSH auth socket location so agent forwarding works with tmux and VS Code
 export SSH_AUTH_SOCK=$HOME/.ssh/auth_sock
+
+# Homebrew
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# MacPorts
+[[ -r "/opt/local/etc/profile.d/bash_completion.sh" ]] && . "/opt/local/etc/profile.d/bash_completion.sh"
 
 # Node
 export NVM_DIR="$HOME/.nvm"

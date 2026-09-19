@@ -1,17 +1,14 @@
 #!/usr/bin/env bash
 
 # install Homebrew
-[ `which brew` ] || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ ! `which brew` ]; then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/usr/local/bin/brew shellenv bash)"
+fi
 
 # Turn off Homebrew’s analytics.
 brew analytics off
-
-if [ `which bash` = '/bin/bash' ]; then
-  # upgrade Bash
-  brew update && brew install bash
-  sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-  chsh -s /usr/local/bin/bash
-fi
 
 # Ask for the administrator password upfront
 sudo -v

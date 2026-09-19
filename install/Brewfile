@@ -2,30 +2,9 @@
 
 tap "deskflow/tap", trusted: true
 
-brew "bash"
-brew "bash-completion@2"
-brew "coreutils"
-brew "ctags"
-brew "curl"
 brew "dockutil"
-brew "fastfetch"
-brew "ffmpeg"
-brew "fortune"
-brew "fswatch"
-brew "git"
-brew "go"
-brew "make"
 brew "mas"
-brew "rbenv"
-brew "ripgrep"
-brew "socat"
-brew "sphinx-doc"
-brew "starship"
-brew "tmux"
 brew "unar"
-brew "vim"
-brew "watchman" # https://github.com/facebook/jest/issues/1767
-brew "yarn"
 
 cask "ckb-next"
 cask "deskflow/tap/deskflow"

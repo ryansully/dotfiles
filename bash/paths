@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 
-# home and local bin
-[ -d $HOME/bin ] && PATH="$HOME/bin:$PATH"
-[ -d $HOME/.local/bin ] && PATH="$HOME/.local/bin:$PATH"
-
-# GNU bin (for brew install make)
-[ -d /usr/local/opt/make/libexec/gnubin ] && PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+# arranged in order from least to most precedence
 
 # Android SDK
 [ -d $HOME/Development/adt-bundle-linux-x86_64/sdk ] && export PATH="${PATH}:$HOME/Development/adt-bundle-linux-x86_64/sdk/tools:$HOME/Development/adt-bundle-linux-x86_64/sdk/platform-tools"
+
+# brew
+[ -f /usr/local/bin/brew ] && eval "$(/usr/local/bin/brew shellenv bash)"
+
+# MacPorts
+[ -d /opt/local/bin ] && PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+# GNU tools (for port install coreutils)
+[ -d /opt/local/libexec/gnubin ] && PATH="/opt/local/libexec/gnubin:$PATH"
+
+# home and local bin
+[ -d $HOME/bin ] || mkdir -p $HOME/bin && PATH="$HOME/bin:$PATH"
+[ -d $HOME/.local/bin ] || mkdir -p $HOME/.local/bin && PATH="$HOME/.local/bin:$PATH"
