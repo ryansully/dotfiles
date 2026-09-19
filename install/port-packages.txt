@@ -12,7 +12,7 @@ gmake
 go
 jq
 # requires a full Xcode installation
-#mas
+mas
 pipx
 rbenv
 ripgrep
@@ -21,5 +21,5 @@ ruby-build
 starship
 tmux
 # requires a full Xcode installation
-#unar
+unar
 vim +python314

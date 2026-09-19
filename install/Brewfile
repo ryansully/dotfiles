@@ -3,8 +3,6 @@
 tap "deskflow/tap", trusted: true
 
 brew "dockutil"
-brew "mas"
-brew "unar"
 
 cask "ckb-next"
 cask "deskflow/tap/deskflow"
@@ -33,7 +31,7 @@ cask "vlc"
 cask "webpack-dashboard"
 
 mas "Amphetamine", id: 937984704
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 
 vscode "compulim.vscode-clock"
 vscode "dbaeumer.vscode-eslint"
