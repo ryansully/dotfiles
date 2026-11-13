@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.9.0)
+    addressable (2.9.1)
       public_suffix (>= 2.0.2, < 8.0)
     clocale (0.0.4)
     colorls (1.5.0)
@@ -32,7 +32,7 @@ DEPENDENCIES
   lolcat
 
 CHECKSUMS
-  addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
+  addressable (2.9.1) sha256=f1212365945455c84e8d031eea40fc6bedf0c663a78d95b3ab93591040bc5c35
   bundler (4.0.21) sha256=7cbf5499b426076aa16c8d28a59e4c2c3aad5a438402abcd961f0119f29f1dd0
   clocale (0.0.4) sha256=5f0e80577eb0dfa9717cfa29194ed570f02b17494f114b57b3dfb4fae159b718
   colorls (1.5.0) sha256=b0933fa8c82f088a05c2599ab50e32fe2842a06b2ae2eec2ab16e4c5f6effff0
