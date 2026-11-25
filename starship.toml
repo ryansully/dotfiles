@@ -13,6 +13,10 @@ staged = '[✚$count](bold green) '
 renamed = '[»${count}](bold green) '
 deleted = '[✘${count}](bold red) '
 
+[python]
+# Potentially dangerous: `uv` can run any binary at `.venv/bin/python` without interaction
+python_binary = [['uv', 'run', '--no-python-downloads', '--no-project', 'python']]
+
 [status]
 disabled = false
 symbol = ''
